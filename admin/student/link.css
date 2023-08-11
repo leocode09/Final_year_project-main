@@ -1,0 +1,14 @@
+dl {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+}
+
+dt {
+    font-weight: bold;
+    margin-right: 5px;
+}
+/* dd {} */

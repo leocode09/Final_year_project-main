@@ -1,0 +1,37 @@
+email
+clearancesystem2023@gmai.com
+password
+clearance@123
+
+<?php 
+require "vendor/autoload.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+$mail = new PHPMailer(true);
+$mail -> isSMTP();
+$mail -> SMTPAuth = true;
+
+$mail -> Host = "smtp.gmail.com";
+$mail -> SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+
+$mail->Port = 587;
+
+$mail -> Username = "clearancesystem2023@gmail.com";
+$mail -> Password = "clearance@123";
+
+$mail -> setFrom("clearancesystem2023@gmail.com");
+$mail -> addAddress("bahatizirimwabagabo@gmail.com");
+
+$mail -> Subject ="Clearance Approved";
+$mail->Body= "Hello";
+
+$mail -> send();
+
+echo "send";
+
+?>
+
+
+
+
+Fatal error: Uncaught exception 'PHPMailer\PHPMailer\Exception' with message 'SMTP Error: Could not connect to SMTP host. Failed to connect to server' in C:\xampp\htdocs\Final_year_project\admin\secretary\vendor\phpmailer\phpmailer\src\PHPMailer.php:2233 Stack trace: #0 C:\xampp\htdocs\Final_year_project\admin\secretary\vendor\phpmailer\phpmailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array) #1 C:\xampp\htdocs\Final_year_project\admin\secretary\vendor\phpmailer\phpmailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Sat, 27 M...', 'Hello\r\n') #2 C:\xampp\htdocs\Final_year_project\admin\secretary\vendor\phpmailer\phpmailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend() #3 C:\xampp\htdocs\Final_year_project\admin\secretary\send_email.php(23): PHPMailer\PHPMailer\PHPMailer->send() #4 {main} thrown in C:\xampp\htdocs\Final_year_project\admin\secretary\vendor\phpmailer\phpmailer\src\PHPMailer.php on line 2233

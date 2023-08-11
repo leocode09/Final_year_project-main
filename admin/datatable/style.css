@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: #219ebc;
+    padding: 10px 0;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+}
+
+.secretary__nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.secretary__nav ul li a{
+    color: white;
+}

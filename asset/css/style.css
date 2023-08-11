@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: whitesmoke;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px  1px  rgb(55, 53, 53);
+}
+
+.login-card h1 { 
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #219ebc;
+}
+
+.login-card .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-card .form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+form .form-group {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px;
+} 
+.form-group input{
+    width: 70%;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+    color: gray;
+}
+
+.form-group input[type='submit']{
+    background: #219ebc; 
+    color: aliceblue;
+
+}
+
+#checkbox span {
+    width: 70%;
+    height: 40px;
+   color: white;
+}
+
+.login-card .form-group select{
+    width: 70%;
+    border: none;
+    color: gray;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+
+.form a{
+    text-decoration: none;
+    color: #219ebc;
+    font-size: 17px;
+    padding: 20px;
+}
+
+/* Registration styles */
+
+.reg-header{
+    width: 100%;
+    background: #219ebc;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.reg-header nav {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reg-header nav ul li {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.reg-header nav ul li:hover {
+   color: aqua;
+   
+}
+.reg-header nav ul li:active {
+    padding:10px 20px 10px 20px; 
+    border-radius: 4px;
+    border: 2px;
+    border-color: gray;
+   
+}
+
+.reg-header nav ul li a{
+    color: white;
+    font-size: 17px;
+}
+
+.reg-header nav ul li a:hover {
+    color: blue;
+}
+
+.reg-main {
+    width: 100%;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reg-main .container .reg-card {
+    background-color: whitesmoke;
+    width: 30%;
+    display: flex;
+    border-radius: 10px; 
+    border-color: #219ebc;
+    box-shadow: 2px 2px 2px 2px #219ebc;
+}
+
+.reg-main .container .reg-card .icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.icon::after {
+    content: '';
+    background: #219ebc;
+    width: 4px;
+    height: 100%;
+    padding-left: 2px;
+    margin-left: 60px;
+    position: absolute;
+
+}
+
+.icon i{
+    font-size: 40px;
+    color: #219ebc;
+}
+
+.reg-card .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc h1 {
+    font-size: 25px;
+}
+
+.desc span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.student-main {
+    padding-top: 100px;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+
+}
+
+.student-main a{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.student-main .student-form {
+    background: whitesmoke;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 1px 1px 1px 1px #219ebc;
+
+}
+
+.student-form form input {
+    color: #219ebc;
+    font-weight: 700;
+    border-color: #219ebc;
+}
+
+.student-form .form-group select{
+    width: 70%;
+    color: gray;
+    outline: none;
+    background-color: transparent;
+    border-top: 2px;
+    border-left: 0;
+    border-color: #219ebc;
+    border-right: 0;
+    margin-top: 20px;
+}
+
+.student-form form input::placeholder {
+    color: gray;
+    font-weight: 300;
+    
+}
+
+.student-form input[type='submit'] {
+    margin: 20px;
+}
+
+#btn:active {
+    background-color: #219ebc;
+    transform: scale(0.9);
+}
+
+.warning {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255,193,7);
+}
+.info {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(40,167,69);
+}
+.error {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(220,53,69);
+}
+
+
+.formStyle{
+    background: red;
+}
