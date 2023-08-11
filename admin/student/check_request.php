@@ -73,7 +73,7 @@ $result_lib = mysqli_query($conn, $check_rollnumber_lib);
 
 // } 
 
-if(!(mysqli_num_rows($result_reg) || mysqli_num_rows($result_fin) || mysqli_num_rows($result_marks) || mysqli_num_rows($result_lib)==1 )){
+if(!(mysqli_num_rows($result_reg) == 1 || mysqli_num_rows($result_fin) == 1 || mysqli_num_rows($result_marks) == 1 || mysqli_num_rows($result_lib) == 1 )){
     $query = "INSERT INTO request VALUES ('$rollnumber','$request')";
     $insert = mysqli_query($conn, $query);
     if($insert == true) {
