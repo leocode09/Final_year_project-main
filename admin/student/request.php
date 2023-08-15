@@ -61,7 +61,7 @@ if (isset($_POST['send_request'])) {
     <section  class="student-main">
         <a href="manage_request.php"><i class="fa-solid fa-eye"></i>View Requests</a>
         <div class="student-form">
-            <h1>SEND REQUEST </h1>
+            <h1>STUDENT REQUEST FORM </h1>
             <?php if(isset($_POST['send_request'])){ ?>
                     <div class="danger">
 
@@ -96,19 +96,20 @@ if (isset($_POST['send_request'])) {
 
                         <?php
                             if(!(mysqli_num_rows($result_reg) == 1 || mysqli_num_rows($result_fin) == 1 || mysqli_num_rows($result_marks) == 1 || mysqli_num_rows($result_lib) == 1 )){
-                                $query = "INSERT INTO request VALUES ('$rollnumber','$request')";
+                                echo 123;
+                                $query = "INSERT INTO request (id, rollnumber, request) VALUES ('','$rollnumber','$request')";
                                 try {
                                     $insert = mysqli_query($conn, $query);
                                 } catch (Exception $e) {
-                                    header('location: request.php?error= Something went wrong, please Try again later!!!');
+                                    header('location: request.php?error=me');
                                 }
                                 if($insert == true) {
                                     $status= 'PENDING';
-                                    $insert_sec_table= "INSERT INTO student_sec_approv VALUES('$rollnumber','$status')";
+                                    $insert_sec_table= "INSERT INTO student_sec_approv VALUES ('','$rollnumber','$status')";
                                     $inserted= mysqli_query($conn,$insert_sec_table);
                             
                                     if($inserted == true){
-                                        $insert_archive = "INSERT INTO requested_docs VALUES('','$rollnumber','$request')";
+                                        $insert_archive = "INSERT INTO requested_docs VALUES ('','$rollnumber','$request')";
                                         $archived = mysqli_query($conn, $insert_archive);
                                         if($archived == true){
                                         header('location: request.php?success= Your request have been approved ');
@@ -149,10 +150,8 @@ if (isset($_POST['send_request'])) {
 
             ?>
             <form method="post">
+                        <?php echo $rollnumber; ?>
                 <div class="student-problem">
-                    <div class="form-group">
-                        <input type="number" name="rollnumber" placeholder=" Enter Roll number" required>    
-                    </div>
                     <div class="form-group">
                         <textarea name="problem" id="" cols="70" rows="10" placeholder=" Write your request  here ...."></textarea>
                     </div>

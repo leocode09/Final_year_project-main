@@ -57,8 +57,10 @@ main {
 form .form-group {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
 } 
 .form-group input{
     width: 100%;
@@ -251,6 +253,7 @@ form .form-group {
     color: #4e00a6;
     font-weight: 700;
     border-color: #4e00a6;
+    margin: 0 10px;
 }
 
 .student-form .form-group select{

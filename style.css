@@ -200,3 +200,42 @@ body.show .form_container {
   text-align: center;
   margin-top: 15px;
 }
+
+/* board */
+.board {
+  width: 70%;
+  height: 50%;
+  background: #0b021761;
+  backdrop-filter: blur(10px) drop-shadow(2px 4px 6px black);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px 120px;
+  color: white;
+}
+.board .forms a:hover {
+    filter: brightness(1.2);
+}
+.board .forms a:active {
+    filter: brightness(0.8);
+}
+.board .forms a {
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 20px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: filter .2s;
+}
+.board .forms .s {
+    background: teal;
+}
+.board .forms .a {
+    background: rgb(155 116 0);
+}

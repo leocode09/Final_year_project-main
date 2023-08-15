@@ -1,8 +1,34 @@
+
+
+<?php 
+    require_once "twilio/functions.php";
+    include "../connect.php";
+
+    if(!empty($_POST['phone']) && !empty($_POST['message'])){
+        $phone = $_POST['phone'];
+        $message = $_POST['message'];
+        $attempt = sendSMS($message, $phone);
+        dump($attempt);
+    }
+
+    $id = $_GET['id'];
+    if (isset($_GET['id'])) {
+        $sql = "SELECT * FROM `student` WHERE rollnumber='$id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+    }
+
+    if (isset($_POST['approve'])) {
+        $sql = "UPDATE `student_sec_approv` SET `status`='APPROVED' WHERE rollnumber='$id'";
+        $result = mysqli_query($conn, $sql);
+        header('location:secretary_view_approved.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,16 +63,16 @@
                         </div>
                         <div class="card-body">
                             <div id="form_approv">
-                                <form action="send_message.php" method='POST'>
+                                <form method='POST'>
                                     <div class="form-group col-md-6 mx-auto">
-                                        <input class="form-control" type="text" placeholder=" Your phone number" name="phone">
+                                        <input class="form-control" type="text" placeholder=" Your phone number" name="phone" value=<?php echo "+25".$row['phone'] ?> required>
                                     </div>
                                     <div class="form-group col-md-6 mx-auto">
-                                        <textarea name="message" class="form-control"></textarea>
+                                        <textarea name="message" class="form-control" required></textarea>
                                     </div>
                                    
                                     <div class="form-group col-md-4 mx-auto">
-                                        <button type="submit" class="btn btn-lg bg-primary text-white">Approve </button>
+                                        <button type="submit" name="approve" class="btn btn-lg bg-primary text-white">Approve</button>
                                     </div>
                                     
                                 </form>

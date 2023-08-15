@@ -64,18 +64,10 @@
                                             $i = $i + 1;
                                             ?>
                                             <tr>
-                                                <td>
-                                                    <?php echo $i ?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['rollnumber'] ?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['request'] ?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $row['status'] ?>
-                                                </td>
+                                                <td><?php echo $i ?></td>
+                                                <td><?php echo $row['rollnumber'] ?></td>
+                                                <td><?php echo $row['request'] ?></td>
+                                                <td><?php echo $row['status'] ?></td>
                                                 <td>
                                                     <a href="secratary_approved_code.php?id=<?php echo $row['rollnumber'] ?>"
                                                    data-id='<?php echo $row['rollnumber'] ?>' class="badge badge-warning w-100" id="approvebtn">Approve</a>

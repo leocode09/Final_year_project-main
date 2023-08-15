@@ -19,46 +19,21 @@ if (isset($_POST['login-student'])) {
 </head>
 
 <body>
-    <main>
-        <div class="login-card">
-            <h1>Student Login</h1>
-            <div class="form">
-                <form action="student-login.php" method="POST">
-                    <?php
-                    if (isset($_GET['error'])) {
-                        ?>
-                        <div class="danger"
-                            style=" background-color: red; text-align: center.; color: white; font-weight: bold; padding: 20px; border-radius: 6px">
-                            <?php
-                            echo $_GET['error'];
-                            ?>
-                        </div>
-
-                        <?php
-                    }
-                    ?>
-                    <div class="form-group">
-                        <input type="number" name="rollnumber" placeholder=" Roll Number" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder=" Password" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="login-student" value="Login">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="rememberme">
-                        <span>Remember me</span>
-                    </div>
-
-                </form>
-                <a href="admin/login.php">Login as Admin? click here</a>
-            </div>
+    <main class="board">
+        <h1>Autometed documents</h1>
+        <p> 
+            hope this message finds you well. I wanted
+            to take a moment to introduce you to the 
+            concept of automated document generation,
+            a powerful tool that can significantly
+            enhance efficiency
+        </p>
+        <div class="forms">
+            <a class="s" href="login.php">Student</a>
+            <a class="a" href="admin/login.php">Administrator</a>
         </div>
+
     </main>
-
-
-
 </body>
 
 </html>

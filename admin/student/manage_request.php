@@ -54,7 +54,8 @@
                                     <tbody>
                                         <?php 
                                         include('../connect.php');
-                                        $rollnumber= $_POST['rollnumber'];
+                                        session_start();
+                                        $rollnumber = $_SESSION['rollnumber'];
                                         $query = "SELECT * FROM `requested_docs` where rollnumber='$rollnumber'";
                                         $result = mysqli_query($conn, $query);
                                         $i = 0;
