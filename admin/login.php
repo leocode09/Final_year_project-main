@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <main>
@@ -53,7 +54,7 @@
                         <input type="submit" name="login" value="Login" >
                     </div>
                 </form>
-                <a href="../index.php">Login as student? click here</a>
+                <a href="../index.php"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;Go back home</a>
             </div>
         </div>
     </main>

@@ -49,15 +49,7 @@ if (isset($_POST['send_request'])) {
     </style>
 </head>
 <body>
-<header class="reg-header">
-        <nav>
-            <ul>
-                <li><a href="student-home.php">Home</a></li>
-                <li><a href="request.php">add request</a></li>
-                <li><a href="../logout.php">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include('navbar.php')?>
     <section  class="student-main">
         <a href="manage_request.php"><i class="fa-solid fa-eye"></i>View Requests</a>
         <div class="student-form">

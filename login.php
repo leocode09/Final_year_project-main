@@ -16,6 +16,7 @@ if (isset($_POST['login-student'])) {
     <title>Login</title>
     <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@ if (isset($_POST['login-student'])) {
                     </div>
 
                 </form>
-                <a href="admin/login.php">Login as Admin? click here</a>
+                <a href="index.php"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;Go back home</a>
             </div>
         </div>
     </main>

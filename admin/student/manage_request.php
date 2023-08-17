@@ -22,17 +22,17 @@
 
 <body id="page-top">
     <header>
-        <?php 
-             include('navbar.php');
+        <?php
+        include('navbar.php');
 
         ?>
-  
+
     </header>
     <div id="wrapper">
 
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-               <div class="container-fluid">
+                <div class="container-fluid">
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -50,37 +50,44 @@
                                             <th colspan='2'>ACTION</th>
                                         </tr>
                                     </thead>
-                        
+
                                     <tbody>
-                                        <?php 
+                                        <?php
                                         include('../connect.php');
                                         session_start();
                                         $rollnumber = $_SESSION['rollnumber'];
                                         $query = "SELECT * FROM `requested_docs` where rollnumber='$rollnumber'";
                                         $result = mysqli_query($conn, $query);
                                         $i = 0;
-                                        while($row= mysqli_fetch_array($result)){
-                                           $i= $i+1;
-                                            ?>    
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            $i = $i + 1;
+                                            ?>
                                             <tr>
-                                            <td><?php echo $i?></td>
-                                            <td><?php echo $row['rollnumber'] ?></td>
-                                            <td><?php echo $row['requested'] ?></td>
-                                            <td>
-                                            <a href="updatemanagestudent.php?id=<?php echo $row['rollnumber']  ?>" class="badge badge-warning w-100">update</a>
-                                            </td>
-                                            <td>
-                                                <a href="deletemanagestudent.php?id=<?php echo $row['rollnumber']  ?>" class="badge badge-danger w-100">Delete</a>
-                                                
-                                            </td>
-                                           
+                                                <td>
+                                                    <?php echo $i ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['rollnumber'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['requested'] ?>
+                                                </td>
+                                                <td>
+                                                    <a href="updateRequestStudent.php?id=<?php echo $row['rollnumber'] ?>&request=<?php echo $row['requested'] ?>"
+                                                        class="badge badge-warning w-100">update</a>
+                                                </td>
+                                                <td>
+                                                    <a href="deleteRequestStudent.php?id=<?php echo $row['rollnumber'] ?>"
+                                                        class="badge badge-danger w-100">Delete</a>
+                                                </td>
 
-                                        </tr>
-                                        <?php        
+
+                                            </tr>
+                                        <?php
                                         }
 
                                         ?>
-                                        
+
 
                                     </tbody>
                                 </table>
@@ -91,16 +98,16 @@
                 </div>
 
             </div>
-          
+
 
         </div>
 
-       
-     
+
+
     </div>
-    
+
     <script src="approve.js"></script>
-   
+
     <!-- Bootstrap core JavaScript-->
     <script src="../datatable/vendor/jquery/jquery.min.js"></script>
     <script src="../datatable/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

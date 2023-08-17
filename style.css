@@ -237,5 +237,12 @@ body.show .form_container {
     background: teal;
 }
 .board .forms .a {
-    background: rgb(155 116 0);
+    background: #d7a204;
+}
+
+.user-info {
+  pointer-events: none;
+  background: #8600eb;
+  padding: 5px 15px;
+  border-radius: 10px;
 }
