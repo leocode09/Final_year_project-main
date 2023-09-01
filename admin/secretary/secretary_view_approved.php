@@ -18,16 +18,23 @@
     <link rel="stylesheet" href="../datatable/style.css">
     <link href="../datatable/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../datatable/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body id="page-top">
-    <header>
-        <?php 
-             include('navbar.php');
+<header class="reg-header">
+    <nav class="secretary__nav">
+        <ul>
+            <li class="user-info"><a href="#"><i class="fa-solid fa-compass-drafting"></i>&nbsp;&nbsp;Secretary</a></li>
+            <li><a href="secretary-home.php">Home</a></li>
+            <li><a href="secretary_view_request.php"> Requested Docs </a></li>
+            <li><a href="secretary_view_approved.php" class="here"> Approved docs</a></li>
+            <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
 
-        ?>
-  
-    </header>
+        </ul>
+    </nav>
+</header>
     <div id="wrapper">
 
         <div id="content-wrapper" class="d-flex flex-column">
@@ -48,6 +55,7 @@
                                             <th>ROLL NUMBER</th>
                                             <th>REQUESTED DOCUMENTS</th>
                                             <th>STATUS</th>
+                                            <th>Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -66,6 +74,7 @@
                                             <td><?php echo $row['rollnumber'] ?></td>
                                             <td><?php echo $row['request'] ?></td>
                                             <td><?php echo $row['status'] ?></td>
+                                            <td><?php echo $row['date'] ?></td>
                                             <td>
                                                 <a href="deleteApproved_docs.php?id=<?php echo $row['rollnumber']  ?>" class="badge badge-danger w-100">Delete</a>
                                             </td>

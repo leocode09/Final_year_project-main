@@ -14,14 +14,25 @@ if(isset($_SESSION['role'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <?php
-    include('navbar.php')
-    ?>
+<header class="reg-header">
+    <nav class="secretary__nav">
+        <ul>
+            
+            <li class="user-info"><a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;Registraction</a></li>
+            <li><a href="registration-home.php">Home</a></li>
+            <li><a href="add-student.php">student</a></li>
+            <li><a href="add-admin.php" class="here">Admin</a></li>
+            <li><a href="registration-add-problem.php"> Student Problem</a></li>
+            <li><a href="../logout.php"> Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+
+        </ul>
+    </nav>
+</header>
 
     <section  class="student-main">
-        <a href="manage_administrater.php"><i class="fa-solid fa-eye"></i>Manage Administrator</a>
+        <a href="manage_administrater.php"><i class="fa-solid fa-eye"></i>Manage User</a>
         <div class="student-form">
-            <h1>ADD ADMINISTRATOR</h1>
+            <h1>ADD USER</h1>
             <form action="backend/insert-admin-user.php" method="POST">
 
             <?php 
@@ -75,7 +86,7 @@ if(isset($_SESSION['role'])){
                     </select>
                 </div>
                 <div class="form-group">
-                    <input id="btn" type="submit" name="add-admin" value="Add admin">
+                    <input id="btn" type="submit" name="add-admin" value="Add User">
                 </div>
                 
             </form>

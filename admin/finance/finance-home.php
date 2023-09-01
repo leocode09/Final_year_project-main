@@ -16,7 +16,16 @@ if(isset($_SESSION['role'])){
 </head>
 <body>
     <header class="reg-header">
-    <?php include('navbar.php')?>
+    <header class="reg-header">
+        <nav class="secretary__nav">
+            <ul>
+                <li class="user-info"><a href="#"><i class="fa-solid fa-coins"></i>&nbsp;&nbsp;Finance</a></li>
+                <li><a href="finance-home.php" class="here">Home</a></li>
+                <li><a href="finance-add-problem.php">add problem</a></li>
+                <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+        </nav>
+    </header>
     </header>
     
     <main class="reg-main">         

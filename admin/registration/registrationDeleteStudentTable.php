@@ -7,6 +7,5 @@
         if ($check) {
             header('location:manage_student.php');
         }
-        # code...
     }
 ?>

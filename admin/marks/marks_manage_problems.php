@@ -18,12 +18,23 @@
     <link rel="stylesheet" href="../../style.css">
     <link href="../datatable/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../datatable/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body id="page-top">
     <header>
+        <header class="reg-header">
+            <nav class="secretary__nav">
+                <ul>
+                    <li class="user-info"><a href="#"><i class="fa-solid fa-marker"></i>&nbsp;&nbsp;Marks</a></li>
+                    <li><a href="marks-home.php">Home</a></li>
+                    <li><a href="marks-add-problem.php" class="here">add problem</a></li>
+                    <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
+        </header>
         <?php
-        include('navbar.php');
         if(isset($_GET['id'])){
             echo $_GET['id'];
         }

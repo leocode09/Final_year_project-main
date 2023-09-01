@@ -39,7 +39,7 @@ if(isset($_SESSION['role'])){
     <section  class="student-main">
         <a href="manage_administrater.php"><i class="fa-solid fa-eye"></i>Go back</a>
         <div class="student-form">
-            <h1>CHANGE ADMINISTRATOR</h1>
+            <h1>CHANGE USER</h1>
             <form method="POST">
 
             <?php 

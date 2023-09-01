@@ -15,9 +15,20 @@ if(isset($_SESSION['role'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<?php
-    include('navbar.php')
-    ?>
+    <header class="reg-header">
+        <nav class="secretary__nav">
+            <ul>
+                
+                <li class="user-info"><a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;Registraction</a></li>
+                <li><a href="registration-home.php" class="here">Home</a></li>
+                <li><a href="add-student.php">student</a></li>
+                <li><a href="add-admin.php">Admin</a></li>
+                <li><a href="registration-add-problem.php"> Student Problem</a></li>
+                <li><a href="../logout.php"> Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+
+            </ul>
+        </nav>
+    </header>
 
     <main class="reg-main">
         <div class="container">
@@ -45,7 +56,7 @@ if(isset($_SESSION['role'])){
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
                 <div class="desc">
-                    <h1>ADMIN</h1>
+                    <h1>USER</h1>
                     <?php 
                     $sql=" SELECT count(id) as sum FROM users";
                     $display = mysqli_query($conn, $sql);

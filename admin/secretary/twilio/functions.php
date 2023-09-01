@@ -5,9 +5,9 @@ use Twilio\Rest\Client;
 //if you don't have a twilio account, sign up using my referral link:
 // https://www.twilio.com/referral/pnDYsm
 //keep these keys private
-$sid = "AC0232a8e31be90f10256a5564f33765ef";
-$token = "2c63befa49818b3c4e051b2499a4abe4";
-$twilioPhone = "+16185911276";
+$sid = "ACbafaa50faad1095bbdc27a6ecfe7a4f0";
+$token = "36e711df4d6e36a364e809f06b51aa90";
+$twilioPhone = "+16188935387";
 
 
 if (!function_exists("sendSMS")) {

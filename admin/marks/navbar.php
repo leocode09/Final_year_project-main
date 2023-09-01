@@ -7,7 +7,6 @@
             <li><a href="marks-home.php">Home</a></li>
             <li><a href="marks-add-problem.php">add problem</a></li>
             <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
-
         </ul>
     </nav>
 </header>

@@ -7,6 +7,6 @@
             <li><a href="finance-home.php">Home</a></li>
             <li><a href="finance-add-problem.php">add problem</a></li>
             <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
-
+        </ul>
     </nav>
 </header>

@@ -11,13 +11,20 @@ if(isset($_SESSION['role'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARKS</title>
     <link rel="stylesheet" href="../../asset/css/style.css">
-    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <header class="reg-header">
-    <?php include('navbar.php')?>
-    </header>
+<header class="reg-header">
+    <nav class="secretary__nav">
+        <ul>
+            <li class="user-info"><a href="#"><i class="fa-solid fa-marker"></i>&nbsp;&nbsp;Marks</a></li>
+            <li><a href="marks-home.php" class="here">Home</a></li>
+            <li><a href="marks-add-problem.php">add problem</a></li>
+            <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </nav>
+</header>
     <main class="reg-main">
         <div class="container">
             <div class="reg-card">

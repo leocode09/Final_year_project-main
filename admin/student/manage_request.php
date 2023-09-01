@@ -47,6 +47,7 @@
                                             <th>#</th>
                                             <th>ROLL NUMBER</th>
                                             <th>DOCUMENT</th>
+                                            <th>DATE</th>
                                             <th colspan='2'>ACTION</th>
                                         </tr>
                                     </thead>
@@ -54,7 +55,7 @@
                                     <tbody>
                                         <?php
                                         include('../connect.php');
-                                        session_start();
+                                        
                                         $rollnumber = $_SESSION['rollnumber'];
                                         $query = "SELECT * FROM `requested_docs` where rollnumber='$rollnumber'";
                                         $result = mysqli_query($conn, $query);
@@ -71,6 +72,9 @@
                                                 </td>
                                                 <td>
                                                     <?php echo $row['requested'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['date'] ?>
                                                 </td>
                                                 <td>
                                                     <a href="updateRequestStudent.php?id=<?php echo $row['rollnumber'] ?>&request=<?php echo $row['requested'] ?>"

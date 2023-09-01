@@ -3,6 +3,7 @@ include('../connect.php');
 session_start();
 
 if(isset($_SESSION['rollnumber'])){
+        $rollnumber = $_SESSION['rollnumber'];
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +18,15 @@ if(isset($_SESSION['rollnumber'])){
 </head>
 <body>
     <header class="reg-header">
-       <?php include('navbar.php');
-       ?>
+    <nav class="secretary__nav">
+        <ul>
+            <li class="user-info"><a href="#"><i class="fa fa-graduation-cap"
+                        aria-hidden="true"></i>&nbsp;&nbsp;<?php echo $rollnumber ?></a></li>
+            <li><a href="student-home.php" class="here" style="text-decoration: underline;">Home</a></li>
+            <li><a href="request.php">add request</a></li>
+            <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </nav>
     </header>
     <main class="reg-main">
         <div class="container">
@@ -35,7 +43,6 @@ if(isset($_SESSION['rollnumber'])){
                     $selected = mysqli_query($conn, $sql);
                     while($row= mysqli_fetch_array($selected)){
                         echo $row['rollnumber'];
-
                     }
                     ?>
                 </div>

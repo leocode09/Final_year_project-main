@@ -26,14 +26,22 @@ if (isset($_SESSION['role'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edit Financial Problem</title>
-        <link rel="stylesheet" href="../../asset/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/markss/font-awesome/6.4.0/css/all.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/markss/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/markss/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../../asset/css/style.css">
+        <link rel="stylesheet" href="../../style.css">
     </head>
 
     <body>
         <header class="reg-header">
-            <?php include('navbar.php') ?>
+            <nav class="secretary__nav">
+                <ul>
+                    <li class="user-info"><a href="#"><i class="fa-solid fa-marker"></i>&nbsp;&nbsp;Marks</a></li>
+                    <li><a href="marks-home.php">Home</a></li>
+                    <li><a href="marks-add-problem.php" class="here">add problem</a></li>
+                    <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
         </header>
         <section class="student-main">
             <a href="marks_manage_problems.php"><i class="fa-solid fa-eye"></i>Go back</a>

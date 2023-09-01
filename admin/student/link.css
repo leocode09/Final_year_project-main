@@ -11,4 +11,18 @@ dt {
     font-weight: bold;
     margin-right: 5px;
 }
-/* dd {} */
+
+.student-problem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-problem p {
+    /* width: 50%; */
+    margin: 10px;
+}
+
+.student-problem textarea {
+    width: 90%;
+}

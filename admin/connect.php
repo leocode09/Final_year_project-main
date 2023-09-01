@@ -4,10 +4,10 @@
     $password = '';
     $db = 'oicas';
     $conn = '';
-
+    
     try {
         $conn = mysqli_connect($host, $username, $password, $db);
-    } catch (mysqli_sql_exception) {
+    } catch (\Throwable $th) {
         echo "can't connect";
     }
 

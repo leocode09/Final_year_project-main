@@ -21,7 +21,7 @@
     if (isset($_POST['approve'])) {
         $sql = "UPDATE `student_sec_approv` SET `status`='APPROVED' WHERE rollnumber='$id'";
         $result = mysqli_query($conn, $sql);
-        header('location:secretary_view_approved.php');
+        // header('location:secretary_view_approved.php');
     }
 
 ?>

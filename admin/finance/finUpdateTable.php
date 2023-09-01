@@ -35,7 +35,14 @@ if (isset($_SESSION['role'])) {
 
     <body>
         <header class="reg-header">
-            <?php include('navbar.php') ?>
+            <nav class="secretary__nav">
+                <ul>
+                    <li class="user-info"><a href="#"><i class="fa-solid fa-coins"></i>&nbsp;&nbsp;Finance</a></li>
+                    <li><a href="finance-home.php">Home</a></li>
+                    <li><a href="finance-add-problem.php" class="here">add problem</a></li>
+                    <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
         </header>
         <section class="student-main">
             <a href="fin_manage_problems.php"><i class="fa-solid fa-eye"></i>Go back</a>

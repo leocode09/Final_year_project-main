@@ -16,16 +16,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../datatable/style.css">
+    <link rel="stylesheet" href="../../asset/css/style.css">
     <link href="../datatable/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="../datatable/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body id="page-top">
     <header>
-        <?php 
-             include('navbar.php');
-        ?>
-  
+    <header class="reg-header">
+        <nav class="secretary__nav">
+            <ul>
+                
+                <li class="user-info"><a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;Registraction</a></li>
+                <li><a href="registration-home.php">Home</a></li>
+                <li><a href="add-student.php" class="here">student</a></li>
+                <li><a href="add-admin.php">Admin</a></li>
+                <li><a href="registration-add-problem.php"> Student Problem</a></li>
+                <li><a href="../logout.php"> Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+
+            </ul>
+        </nav>
+    </header>
     </header>
     <div id="wrapper">
 
@@ -50,6 +62,7 @@
                                             <th>PASSWORD</th>
                                             <th>EMAIL</th>
                                             <th>PHONE NUMBER</th>
+                                            <th>DATE</th>
                                             <th colspan='2'>ACTION</th>
                                         </tr>
                                     </thead>
@@ -71,6 +84,7 @@
                                             <td><?php echo $row['password'] ?></td>
                                             <td><?php echo $row['email'] ?></td>
                                             <td><?php echo $row['phone'] ?></td>
+                                            <td><?php echo $row['Date'] ?></td>
                                             <td>
                                             <a href="registrationUpdateStudentTable.php?id=<?php echo $row['rollnumber']  ?>" class="badge badge-warning w-100">update</a>
                                             </td>

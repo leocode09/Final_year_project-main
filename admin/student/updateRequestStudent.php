@@ -57,7 +57,13 @@ if (isset($_POST['update_request'])) {
                         <?php echo $rollnumber; ?>
                 <div class="student-problem">
                     <div class="form-group">
-                        <textarea name="problem" cols="70" rows="10" placeholder=" Write your request  here ...."><?php echo $request; ?></textarea>
+                        <select name="problem">
+                            <option value="null">-- select your request here --</option>
+                            <option value="degree">Degree</option>
+                            <option value="transcript">Transcript</option>
+                            <option value="to-who">To Who</option>
+                            <option value="advanced-diploma">Advanced Diploma</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <input id="btn" type="submit" name="update_request" value="Update Request">

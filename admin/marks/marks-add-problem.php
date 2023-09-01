@@ -16,9 +16,16 @@ if(isset($_SESSION['role'])){
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="reg-header">
-        <?php include('navbar.php')?>
-    </header>
+<header class="reg-header">
+    <nav class="secretary__nav">
+        <ul>
+            <li class="user-info"><a href="#"><i class="fa-solid fa-marker"></i>&nbsp;&nbsp;Marks</a></li>
+            <li><a href="marks-home.php">Home</a></li>
+            <li><a href="marks-add-problem.php" class="here">add problem</a></li>
+            <li><a href="../logout.php">Logout&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </nav>
+</header>
     <section  class="student-main">
         <a href="marks_manage_problems.php"><i class="fa-solid fa-eye"></i>Manage Student Problem</a>
         <div class="student-form">

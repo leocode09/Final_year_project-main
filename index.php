@@ -20,14 +20,13 @@ if (isset($_POST['login-student'])) {
 
 <body>
     <main class="board">
-        <h1>Autometed documents</h1>
-        <p> 
-            hope this message finds you well. I wanted
-            to take a moment to introduce you to the 
-            concept of automated document generation,
-            a powerful tool that can significantly
-            enhance efficiency
-        </p>
+        <h1>Online Intelligent Clearance Approval System</h1>
+        <div>
+            <p>Welcome to Kigali Independent University,</p><br>
+            <p> ULK's an online intelligent clearance approval system
+                please select an account depending on your user-role eirther as a student or an administration</p>
+        </div>
+        
         <div class="forms">
             <a class="s" href="login.php">Student</a>
             <a class="a" href="admin/login.php">Administrator</a>
